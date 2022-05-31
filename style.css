@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--violet);
+    color: #fff;
+}
+
+/* Header section */
+header {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+}
+
+.logo {
+    width: 40%;
+    padding: 10px 0;
+}
+
+.illustration {
+    width: 100%;
+    min-width: 200px;
+    padding: 30px 0 0;
+}
+
+/* Main */
+main {
+    text-align: center;
+    width: 100%;
+    min-width: 200px;
+    padding: 30px;
+}
+
+main h1 {
+    margin-bottom: 15px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+/* Interactive elements */
+button {
+    color: var(--violet);
+    padding: 10px 70px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px hsl(257, 51%, 45%);
+    transition: all 0.1s ease-in ;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: var(--magenta);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--magenta);
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+    transform: scale(1.5, 1.5);
+}
+
+
+.footer-a {
+    color: var(--magenta);
+}
+
+@media (min-width: 1080px){
+    body {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: 1fr 150px;
+        background-image: url(images/bg-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        background-image: none;
+        grid-row: 1 / span 2;
+    }
+
+    main {
+        text-align: left;
+        align-self: end;
+        margin-right: 10px;
+        padding: 30px 40px 10px 0;
+    }
+
+    footer {
+        align-self: end;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    .icons{
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        justify-content: end;
+        margin-right: 20px;
+    }
+}
+
